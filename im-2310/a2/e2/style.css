@@ -1,0 +1,133 @@
+/* z-index order */
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/*  I chose the colors in the CSS code based on the 1bit Monitor Glow Palette by Polyducks (https://lospec.com/palette-list/1bit-monitor-glow).
+ The colors in this palette are a mix of dark and light shades that are easy on the eyes and work well together. 
+ The dark background color (#222323) provides a nice contrast for the lighter text and accent colors, making the text easy to read. 
+ The accent colors (#5252ff and #b6e878) are bright and eye-catching, making them good choices for elements that need to stand out on the page, such as buttons and links.
+ Overall, I chose this color scheme to create a modern and visually appealing design that is easy to navigate and read. */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --border: 1px solid var(--col-02);
+  --filter-bg-color: #f8f8f8;
+  --filter-text-color: #666;
+  --filter-hover-bg-color: #666;
+  --filter-hover-text-color: #fff;
+  --selected-filter-bg-color: #666;
+  --selected-filter-text-color: #fff;
+  --recipe-bg-color: #afafaf;
+  --recipe-box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.1);
+  --recipe-text-color: #333;
+  --recipe-attribution-color: #666;
+  --recipe-labels-color: #666;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 2vw;
+}
+
+/*
+  The display: flex property is used to create a flexible container that can adjust its contents based on available space.
+   The flex-direction: column property is used to make the container flow vertically. 
+   The background-color, box-shadow, and border properties are used to add visual styling to the recipe box.
+*/
+.RecipeBox {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--recipe-bg-color);
+  box-shadow: var(--recipe-box-shadow);
+  border: var(--border);
+}
+
+.FilterBox {
+  display: flex;
+}
+/*background-color and color properties are used to set the button's background color and text color. */
+.FilterButton {
+  background-color: var(--filter-bg-color);
+  color: var(--filter-text-color);
+}
+
+.FilterButton:hover {
+  background-color: var(--filter-hover-bg-color);
+  color: var(--filter-hover-text-color);
+}
+
+.SelectedFilter {
+  background-color: var(--selected-filter-bg-color);
+  color: var(--selected-filter-text-color);
+}
+
+.RecipeLink {
+  text-decoration: none;
+  color: var(--recipe-text-color);
+}
+/*The font-size, margin-top properties are used to set the font size, text color, and spacing of the labels.*/
+.RecipeName {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.Author {
+  font-size: 20px;
+  color: var(--recipe-labels-color);
+}
+
+.RecipeImageContainer {
+  display: flex;
+}
+
+/*The object-fit: cover property is used to resize the image to cover the entire container while maintaining its aspect ratio.*/
+
+.RecipeImg {
+  object-fit: cover;
+}
+
+.Attribution {
+  font-size: 18px;
+  color: var(--recipe-attribution-color);
+}
+
+.Publisher {
+  font-size: 20px;
+  color: var(--recipe-labels-color);
+}
+
+.Cuisine {
+  font-size: 18px;
+  color: var(--recipe-labels-color);
+  margin-top: 5px;
+}
+
+.TimeToCook {
+  font-size: 18px;
+  color: var(--recipe-labels-color);
+  margin-top: 5px;
+}
+
+.SkillLevel {
+  font-size: 18px;
+  color: var(--recipe-labels-color);
+  margin-top: 5px;
+}
+
+.Course {
+  font-size: 18px;
+  color: var(--recipe-labels-color);
+  margin-top: 5px;
+}
+
+.Servings {
+  font-size: 18px;
+}

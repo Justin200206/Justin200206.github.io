@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Cat</title>
+</head>
+<!-- Unique css designs -->
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .conitenr {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(to top, #e2f9b2, #dbf9b9, #d5f8c1, #d0f7c8, #cdf5ce, #c8f5d4, #c4f4da, #c1f3df, #bcf2e6, #b9f1ed, #b8eff3, #baedf8);
+    }
+
+    .box1 {
+        width: 80%;
+        height: auto;
+        background: #b8eff3;
+    }
+
+    .top {
+        width: 100%;
+        height: 16rem;
+        background: white;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .nav {
+        width: 100%;
+        height: 5rem;
+        background: greenyellow;
+        display: flex;
+    }
+
+    .navimg {
+        width: 100%;
+        height: 40rem;
+        background: burlywood;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    .outbox1{
+        width: 100%;
+        height: 25rem;
+        display: flex;
+    }
+    .inbox1,.inbox2{
+        width: 50%;
+        height: 100%;
+    }
+    .inbox1{
+        display: flex;
+        justify-content: center;
+    }
+    .inbox2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+    }
+
+
+    .outbox2{
+        width: 100%;
+        height: 25rem;
+        background: brown;
+        display: flex;
+    }
+    .inbox1-2,.inbox2-2{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inbox1-2{
+        background: rosybrown;
+    }
+    .inbox2-2{
+        background: red;
+    }
+
+    .outbox3{
+        width: 100%;
+        height: 25rem;
+        background: brown;
+        display: flex;
+    }
+    .inbox1-3,.inbox2-3{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inbox1-3{
+        background: red;
+    }
+    .inbox2-3{
+        background: rosybrown;
+    }
+
+
+    .outbox4{
+        width: 100%;
+        height: 25rem;
+        background: brown;
+        display: flex;
+    }
+    .inbox1-4,.inbox2-4{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inbox1-4{
+
+        background: rosybrown;
+    }
+    .inbox2-4{
+        background: red;
+    }
+
+    .navbutton{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 10px;
+        color: white;
+        text-shadow: 2px 2px rgb(116, 116, 116);
+        text-transform: uppercase;
+        border: solid 2px black;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 17px;
+        background-color: hsl(49deg 98% 60%);
+        border-radius: 50px;
+        position: relative;
+        transition: all .5s ease;
+        height: 60px;
+        width: 140px;
+        overflow: hidden;
+    }
+
+    button:active {
+        transform: scale(.9);
+        transition: all 100ms ease;
+    }
+
+    button img {
+        transition: all .5s ease;
+        z-index: 2;
+        opacity: 0.5;
+    }
+
+    button:hover{
+        width: 280px;
+    }
+
+    .play {
+        transition: all .5s ease;
+        transition-delay: 300ms;
+    }
+
+    button:hover .buttonimg {
+        animation: bigsmall 2s forwards;
+    }
+
+    .now {
+        position: absolute;
+        left: 0;
+        transform: translateX(-100%);
+        transition: all .5s ease;
+        z-index: 2;
+    }
+
+    button:hover .now {
+        transform: translateX(20px);
+        transition-delay: 300ms;
+    }
+
+    button:hover .play {
+        transform: translateX(300%);
+        transition-delay: 300ms;
+    }
+
+    .buttonimg {
+        width: 50px;
+        height: 50px;
+    }
+    /*Scales, translates, and changes the opacity of an element over time, creating an animated effect.*/
+    @keyframes bigsmall {
+        0% {
+            transform: scale(1) translate(0%);
+            opacity: 0.5;
+
+        }
+        50% {
+            transform: scale(2) translate(110%);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5) translate(110%);
+            opacity: 1;
+        }
+    }
+    .cirle{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        overflow: hidden;
+        transform: scale(1.5);
+    }
+    .intext{
+        width: 80%;
+        height: 80%;
+    }
+    a{
+        text-decoration: none;
+    }
+    .topimg{
+        margin-top: -30rem;
+    }
+</style>
+<body>
+     <!-- The bar above the navigation bar -->
+        <div class="conitenr">
+    <div class="box1">
+        <div style="background: pink" style="overflow: hidden" class="top">
+            <img  class="topimg" style="width: 100%;object-fit: cover" src="img/allll.jpg">
+        </div>
+        <!-- Navagetion bar -->
+        <div class="nav">
+            <div class="navbutton">
+                <a href="./index2.html">
+                    <button>
+                        <img class="buttonimg" src="./img/xiaoshizi.png" alt="">
+                        <span class="now">lion</span>
+                        <span class="play">!lion</span>
+                    </button>
+                </a>
+            </div>
+            <div class="navbutton">
+                <a href="./index3.html">
+                    <button style="background:ghostwhite">
+                        <img class="buttonimg" src="./img/xiaomaomi.png" alt="">
+                        <span class="now">Cat</span>
+                        <span class="play">!Cat</span>
+                    </button>
+                </a>
+            </div>
+            <div class="navbutton">
+                <div id="cirle" class="cirle">
+                    <img style="height: 100%;overflow: hidden" src="./img/xiaomaomi.png" alt="">
+                </div>
+            </div>
+            <div class="navbutton">
+                <a href="index4.html">
+                    <button style="background: yellow">
+                        <img class="buttonimg" src="./img/keji-.png" alt="">
+                        <span class="now">Dog</span>
+                        <span class="play">!Dog</span>
+                    </button>
+                </a>
+            </div>
+            <div class="navbutton">
+                <a href="index5.html">
+                    <button style="background:#969DB9">
+                        <img class="buttonimg" src="./img/daxiang-01.png" alt="">
+                        <span class="now">elephant</span>
+                        <span class="play">!eleph</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div style="background: rgb(221,230,242)" class="navimg">
+            <img style="height: 100%" src="./img/wxcat.jpg" alt="">
+        </div>
+         <!-- Content-->
+        <div class="outbox2">
+            <div style="background: #D3D2D4" class="inbox1-2">
+                <div class="intext">
+                    <span style="font-size: 23px">Cats, belonging to the cat family, are widely used pets in families all over the world. The ancestor of the domestic cat is speculated to be the desert cat in ancient Egypt, the Persian cat in Persia, which has been domesticated by humans for 3,500 years</span>
+                </div>
+            </div>
+            <div style="background: #A5A4A7" class="inbox2-2">
+                <img style="height: 100%" src="./img/xiaomaomi.png">
+            </div>
+        </div>
+
+        <div class="outbox2">
+            <div style="background: #D3D2D4" class="inbox1-2">
+                <div class="intext">
+                    <span style="font-size: 23px">Cats are very flexible and agile. They can squeeze through small spaces, jump up to six times their length, and land on their feet most of the time. They have retractable claws that help them climb, scratch, and hunt. Cats are carnivorous and have sharp teeth and strong jaws that can deliver a powerful bite. They can also run up to 48 km/h (30 mph) and have excellent vision, especially at night</span>
+                </div>
+            </div>
+            <div style="background: #D3D2D4" class="inbox2-2">
+                <div class="intext">
+                    <span style="font-size: 23px">Cats are very social and affectionate animals. They live in groups called colonies, which consist of related females and their offspring. They share resources, groom each other, and protect each other from predators. Cats also bond with humans and other animals, such as dogs, rabbits, and birds. They show their love by rubbing their heads, licking, nuzzling, or cuddling. Cats also have a special way of marking their territory and their friends by rubbing their scent glands on objects or people.</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
+<!-- A JavaScript event listener that triggers an action when a specific element is clicked. Allowing sound effects to be played when a specific element is clicked. -->
+<script>
+    let cirle = document.getElementById('cirle');
+    cirle.addEventListener('click',function () {
+        let audio=new Audio();
+        audio.src='./audio/cat.mp3';
+        audio.play();
+    })
+</script>

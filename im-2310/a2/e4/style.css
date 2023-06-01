@@ -1,0 +1,193 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --col-05:#bcbdbc;
+  --col-06:#6f6f6f;
+  --border: 1px solid var(--col-02);
+}
+
+html {
+  background-color: #a4a9df;
+}
+
+
+.video-player-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  width: 80%; 
+}
+
+.video-element-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+}
+
+#videoElement {
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#videoPlayOverlay {
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;
+}
+
+.video-controls-wrapper {
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+  box-shadow: 3px 3px 5px black;
+  transition: 1s all;
+}
+
+#controlsWrapper {
+  display: none;
+}
+
+.video-control-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.video-control-button:hover {
+  background-color: var(--col-05);
+}
+
+.video-control-button:active {
+  background-color: var(--col-06);
+}
+
+.button-icon {
+  pointer-events: none;
+}
+
+#playButton {
+  width: 30px;
+  height: 30px;
+  background-image: url('./icons/play.svg');
+}
+
+
+#FullScreen {
+  width: 32px;
+  height: 32px;
+  background-image: url('./icons/fullScreen.svg');
+  background-size: cover;
+  position: absolute;
+  right: 0;
+}
+
+
+#muteButton {
+  width: 35px;
+  height: 35px;
+  background-image: url('./icons/mute.svg');
+}
+
+
+#rewindButton {
+  width: 36px;
+  height: 36px;
+  background-image: url('./icons/rewind.svg');
+}
+
+#fastForwardButton {
+  width: 36px;
+  height: 36px;
+  background-image: url('./icons/fastForward.svg');
+}
+
+.element-class {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.video-progress-bar {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 2rem;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: #333;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+::-moz-progress-bar {
+  background-color: var(--col-02);
+}
+
+::-webkit-progress-bar {
+  background-color: var(--col-01);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+}
+
+::-webkit-progress-value {
+  background-color: var(--col-02);
+}
+
+.timeline {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: red;
+  width: 0%;
+}
+
+#current-time {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-size: 14px;
+}
+
+.timeline-loading {
+  background-image: -moz-repeating-linear-gradient(45deg, var(--col-03) 0% 2%, transparent 2% 4%, red 4%);
+  background-size: 200% 100%;
+  animation: loadingAnimation 4s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  100%{
+    background-position: 50% 0%;
+  }
+}
+

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Lion</title>
+</head>
+<!-- Unique css designs -->
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .conitenr {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(to top, #e2f9b2, #dbf9b9, #d5f8c1, #d0f7c8, #cdf5ce, #c8f5d4, #c4f4da, #c1f3df, #bcf2e6, #b9f1ed, #b8eff3, #baedf8);
+    }
+
+    .box1 {
+        width: 80%;
+        height: auto;
+        background: #b8eff3;
+    }
+
+    .top {
+        width: 100%;
+        height: 16rem;
+        background: white;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .nav {
+        width: 100%;
+        height: 5rem;
+        background: greenyellow;
+        display: flex;
+    }
+
+    .navimg {
+        width: 100%;
+        height: 40rem;
+        background: burlywood;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    .outbox1{
+        width: 100%;
+        height: 25rem;
+        display: flex;
+    }
+    .inbox1,.inbox2{
+        width: 50%;
+        height: 100%;
+    }
+    .inbox1{
+        display: flex;
+        justify-content: center;
+    }
+    .inbox2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+    }
+
+
+    .outbox2{
+        width: 100%;
+        height: 25rem;
+        background: brown;
+        display: flex;
+    }
+    .inbox1-2,.inbox2-2{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inbox1-2{
+        background: rosybrown;
+    }
+    .inbox2-2{
+        background: red;
+    }
+
+    .outbox3{
+        width: 100%;
+        height: 25rem;
+        background: brown;
+        display: flex;
+    }
+    .inbox1-3,.inbox2-3{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inbox1-3{
+        background: red;
+    }
+    .inbox2-3{
+        background: rosybrown;
+    }
+
+
+    .outbox4{
+        width: 100%;
+        height: 25rem;
+        background: brown;
+        display: flex;
+    }
+    .inbox1-4,.inbox2-4{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inbox1-4{
+
+        background: rosybrown;
+    }
+    .inbox2-4{
+        background: red;
+    }
+
+    .navbutton{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 10px;
+        color: white;
+        text-shadow: 2px 2px rgb(116, 116, 116);
+        text-transform: uppercase;
+        border: solid 2px black;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 17px;
+        background-color: hsl(49deg 98% 60%);
+        border-radius: 50px;
+        position: relative;
+        transition: all .5s ease;
+        height: 60px;
+        width: 140px;
+        overflow: hidden;
+    }
+
+    button:active {
+        transform: scale(.9);
+        transition: all 100ms ease;
+    }
+
+    button img {
+        transition: all .5s ease;
+        z-index: 2;
+        opacity: 0.5;
+    }
+
+    button:hover{
+        width: 280px;
+    }
+
+    .play {
+        transition: all .5s ease;
+        transition-delay: 300ms;
+    }
+
+    button:hover .buttonimg {
+        animation: bigsmall 2s forwards;
+    }
+
+    .now {
+        position: absolute;
+        left: 0;
+        transform: translateX(-100%);
+        transition: all .5s ease;
+        z-index: 2;
+    }
+
+    button:hover .now {
+        transform: translateX(20px);
+        transition-delay: 300ms;
+    }
+
+    button:hover .play {
+        transform: translateX(300%);
+        transition-delay: 300ms;
+    }
+
+    .buttonimg {
+        width: 50px;
+        height: 50px;
+    }
+    /*Scales, translates, and changes the opacity of an element over time, creating an animated effect.*/
+    @keyframes bigsmall {
+        0% {
+            transform: scale(1) translate(0%);
+            opacity: 0.5;
+
+        }
+        50% {
+            transform: scale(2) translate(110%);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5) translate(110%);
+            opacity: 1;
+        }
+    }
+    .cirle{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        overflow: hidden;
+        transform: scale(1.5);
+    }
+    .intext{
+        width: 80%;
+        height: 80%;
+    }
+    a{
+        text-decoration: none;
+    }
+    .topimg{
+        margin-top: -30rem;
+    }
+</style>
+<body>
+<div class="conitenr">
+    <!-- The bar above the navigation bar -->
+    <div class="box1">
+        <div style="background: pink" style="overflow: hidden" class="top">
+            <img  class="topimg" style="width: 100%;object-fit: cover" src="img/allll.jpg">
+        </div>
+        <div class="nav">
+            <div class="navbutton">
+                <a href="./index2.html">
+                <button>
+                    <img class="buttonimg" src="./img/xiaoshizi.png" alt="">
+                    <span class="now">lion</span>
+                    <span class="play">!lion</span>
+                </button>
+                </a>
+            </div>
+            <div class="navbutton">
+                <a href="./index3.html">
+                <button style="background:ghostwhite">
+                    <img class="buttonimg" src="./img/xiaomaomi.png" alt="">
+                    <span class="now">Cat</span>
+                    <span class="play">!Cat</span>
+                </button>
+                </a>
+            </div>
+            <!-- Navagetion bar -->
+            <div class="navbutton">
+                <div id="cirle" class="cirle">
+                    <img style="height: 100%;overflow: hidden" src="./img/xiaoshizi.png" alt="">
+                </div>
+            </div>
+            <div class="navbutton">
+                <a href="index4.html">
+                <button style="background: yellow">
+                    <img class="buttonimg" src="./img/keji-.png" alt="">
+                    <span class="now">Dog</span>
+                    <span class="play">!Dog</span>
+                     </button>
+                </a>
+            </div>
+            <div class="navbutton">
+                <a href="index5.html">
+                <button style="background:#969DB9">
+                    <img class="buttonimg" src="./img/daxiang-01.png" alt="">
+                    <span class="now">elephant</span>
+                    <span class="play">!eleph</span>
+                </button>
+                </a>
+            </div>
+        </div>
+        <div class="navimg">
+            <img style="height: 100%;object-fit: cover" src="./img/wxlion.jpg" alt="">
+        </div>
+        <!-- Content-->
+        <div class="outbox2">
+            <div style="background: #BA9D84" class="inbox2-2">
+                <img style="height: 100%" src="./img/xiaoshizi.png">
+            </div>
+            <div style="background: #F8E4C8" class="inbox1-2">
+                <div class="intext">
+                    <span style="font-size: 23px">Lions are amazing animals that belong to the cat family. They are the second largest cats in the world, after tigers. They live in groups called prides, which consist of several females, their cubs, and one or two males. Lions are mostly active at night and hunt a variety of prey, such as zebras, giraffes, and antelopes. They can run up to 80 km/h (50 mph) and have powerful jaws and claws to catch and kill their food.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="outbox2">
+            <div style="background: #F8E4C8" class="inbox2-2">
+                <div class="intext">
+                    <span style="font-size: 23px">Lions have many distinctive features that make them stand out from other cats. The most obvious one is the mane of the male lion, which is a thick fur that covers his head, neck, and shoulders. The mane can be different colors, from light brown to black, and it shows his strength and health to other lions. The female lion, or lioness, does not have a mane, but she is smaller and faster than the male. She also does most of the hunting for the pride, while the male protects the territory and the cubs.</span>
+                </div>
+            </div>
+            <div style="background: #F8E4C8" class="inbox1-2">
+                <div class="intext">
+                    <span style="font-size: 23px">Lions are very social animals that communicate with each other through sounds, gestures, and body language. They can roar very loudly, which can be heard up to 8 km (5 miles) away. They use their roar to mark their territory, warn off intruders, or call for help. They also purr, snarl, growl, and grunt to express their feelings. Lions can also rub their heads, lick each other, or nuzzle to show affection and bond with their pride members.</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
+<!-- A JavaScript event listener that triggers an action when a specific element is clicked. Allowing sound effects to be played when a specific element is clicked. -->
+<script>
+    let cirle = document.getElementById('cirle');
+    cirle.addEventListener('click',function () {
+        let audio=new Audio();
+        audio.src='./audio/lion.wav';
+        audio.play();
+    })
+</script>

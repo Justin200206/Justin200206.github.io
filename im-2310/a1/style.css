@@ -1,0 +1,33 @@
+body {
+  color: #000000;
+  background-color: rgb(255, 255, 0);
+    font-family: "Helvetica", sans-serif;
+    font-size: 1.3em;
+}
+
+h1 {
+    color: #ffffff;
+    background-color: #8e11fc;
+    text-align: center;
+  }
+
+p {
+    color: #fdfdfd;
+    background-color: #000000;
+}
+
+div.e {
+    width: 275px;
+    margin: auto;
+    border: 2px solid #8e11fc;
+    background-color: lightblue;
+    color: rgb(255, 41, 41);
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+

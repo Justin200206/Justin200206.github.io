@@ -1,0 +1,112 @@
+      /* This is the grid generated from the Grid Layout Tool, refer to the layout of Akira Vol 1 - page 167
+    I use of columns and rows in CSS to greatly improve the readability and usability of a webpage by providing a clear structure and organization for the content. 
+    It can help to create a more organized and visually appealing layout on a webpage. */
+    .container {  display: grid;
+        background-color: #000000;
+          color: #000;
+        grid-template-columns: 0.7fr 1.8fr;
+        grid-template-rows: 0.9fr 0.8fr 2.1fr 0.9fr;
+        gap: 18px 12px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "p1 p2"
+          "p1 p3"
+          "p4 p5"
+          "p9 p9";
+        width: 900px;
+        height: 1450px;
+        font-size: 24px;
+          justify-content: center;
+          text-align: center;
+          max-width: 800px;
+          padding: 20px;
+          border: 5px solid #ff69b4;
+          border-radius: 10px;
+      }
+      /* A black background makes it easier for users to see the content*/
+      body {
+        background-color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Each grid item is a white square with a pink border, and the colors of the squares alternate between pink, white, and black that create a distinct and recognizable look. 
+         Inspired by Naoko Takeuchi's Sailor Moon. The use of bright colors also adds to the overall cheerful and optimistic tone of the layout. */
+      
+      .p1 { grid-area: p1;
+        background-color: #ff69b4;
+        color: #fff;
+        border: 5px solid #ff69b4;
+        border-radius: 10px;
+      }
+      
+      .p2 { grid-area: p2; 
+        background-color: #fff;
+        color: #000;
+        border: 5px solid #ff69b4;
+        border-radius: 10px;
+      }
+      
+      .p3 { grid-area: p3;
+        background-color: #000;
+        color: #fff;
+        border: 5px solid #ff69b4;
+        border-radius: 10px;
+      }
+      
+      .p4 {  display: grid;
+        background-color: #ff69b4;
+        border: 5px solid #ff69b4;
+        border-radius: 10px;
+        color: #fff;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . ."
+          ". . ."
+          ". . .";
+        grid-area: p4;
+      }
+      
+      .p5 {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 18px 12px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "p6 p6 p7"
+          "p6 p6 p7"
+          "p8 p8 p7";
+        grid-area: p5;
+      }
+      
+      .p6 { grid-area: p6; 
+        background-color: #fff;
+        color: #000;
+        border: 5px solid #ff69b4;
+          border-radius: 10px;
+      }
+      
+      .p7 { grid-area: p7; 
+        background-color: #000;
+        color: #fff;
+        border: 5px solid #ff69b4;
+        border-radius: 10px;
+      }
+      
+      .p8 { grid-area: p8;
+        background-color: #ff69b4;
+        color: #fff;
+        border: 5px solid #ff69b4;
+        border-radius: 10px;
+      }
+      
+      .p9 { grid-area: p9; 
+        background-color: #fff;
+        color: #000;
+        border: 5px solid #ff69b4;
+        border-radius: 10px;
+      }
+      
